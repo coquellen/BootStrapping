@@ -94,7 +94,7 @@ def bootstrap_stream(stream_fn, output, dict, N):
 
     keys = list(dict.keys())
     total = list(range(len(keys) - 1))
-    sele = random.choices(total, k=1000)
+    sele = random.choices(total, k=len(total))
 
     stream = open(stream_fn)
     out = open(f'{output}_{N:03d}.stream','w')
