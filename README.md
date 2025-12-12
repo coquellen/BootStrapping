@@ -24,7 +24,7 @@ The resampled dataset contains the same number of indexed patterns (i.e 1000), w
 
 If this is first time you want to generate boostrapped streams for this stream, run the scripts as follows:
 ```
-python --stream example_1k_indexed.stream
+python bootstrapp_stream.py --stream example_1k_indexed.stream
 ```
 
 This will generate a json file (example_1k_indexed.json) which can further be used if the script is called again. 
@@ -34,7 +34,7 @@ It is particulalrly useful for crystFEL stream files of tens of thoushands index
 By default, a single bootstrapped stream (example_1k_indexed_000.stream) will be generated. 
 You can generated more (recommended for statistical purposes) with -n paramters.
 ```
-python --stream example_1k_indexed.stream --json example_1k_indexed.json -n 10
+python bootstrapp_stream.py --stream example_1k_indexed.stream --json example_1k_indexed.json -n 10
 ```
 This command will generate 10 boostrapped streams, using the previously created json file (to avoid parsing the input stream again).
 Beware, example_1k_indexed_000.stream will be overwritten. 
